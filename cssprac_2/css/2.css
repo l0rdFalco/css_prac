@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    padding: 5%;
+    font-size: 1rem;
+    color: plum;
+}
+
+input,
+button {
+    font: inherit;
+    color: inherit;
+}
+
+p {
+    /* typography prac*/
+    text-decoration: none;
+    text-transform: lowercase;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.8rem;
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+.container {
+    font-size: 1.5rem;
+    padding: 1em;
+    margin: 1em;
+    border: 5px outset rebeccapurple;
+    outline: 2px solid palevioletred;
+    outline-offset: 4px;
+}
+
+.circle {
+
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(48, 121, 121);
+    margin: 2rem auto;
+    border-radius: 5rem;
+    border: 0.1rem solid rgb(139, 33, 33);
+    outline: 0.2rem solid rgb(114, 123, 250);
+    outline-offset: 1rem;
+}
+
+.circle:hover {
+    background-color: rgb(60, 121, 48);
+    border: 0.1rem solid rgb(139, 33, 33);
+    outline: 0.2rem solid salmon;
+
+}
+
+a {
+    text-decoration: underline;
+    cursor: crosshair;
+}
+
+a:visited {
+    color: red;
+
+}
+
+ol {
+    list-style-type: lower-alpha;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: center;
+    text-align: center;
+}
+
+ul li:nth-child(odd) {
+    color: red;
+}
+
+ul ::marker {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    content: "bling";
+
+}

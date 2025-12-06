@@ -1,0 +1,283 @@
+/*reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*variables*/
+:root {
+    /*color*/
+    --BGCOLOR: palevioletred;
+    --BDRCOLOR: grey;
+    /*font*/
+    --FF: fantasy;
+    --FS: 1.5rem;
+
+    /*positioning*/
+    --POS-STICKY: sticky;
+
+    --BDR: 2px solid var(--BDRCOLOR);
+}
+
+/*how to define color schemes
+essentially, redefine the variables in the above :root pseudoclass
+settings are triggered depending on system theme settings
+*/
+@media (prefers-color-scheme:dark) {
+
+    :root {
+        /*use the save variable names as in the root above*/
+        --BGCOLOR: rgb(54, 51, 51);
+
+    }
+
+
+}
+
+
+img {
+
+    /*removes the little space that is under all images*/
+    display: block;
+    /*to avoid it from overflowing its container*/
+    max-width: 100%;
+    height: auto;
+}
+
+/*utility classes*/
+.nowrap {
+    white-space: nowrap;
+}
+
+
+/*general styling*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-size: var(--FS);
+    font-family: var(--FF);
+    min-height: 100vh;
+    background-color: var(--BGCOLOR);
+    background-image: radial-gradient(whitesmoke, var(--BGCOLOR));
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    position: var(--POS-STICKY);
+    background-color: var(--BGCOLOR);
+    color: wheat;
+    text-align: center;
+    border: 1px solid whitesmoke;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+nav {
+    background-color: blueviolet;
+    padding: 0.5rem;
+    border-bottom: 2px solid gold;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*
+nav a:any-link is shorthard for selecting both the link and visited states 
+*/
+nav a:link,
+nav a:visited {
+    color: coral;
+}
+
+/*
+the following repetition can be removed by using the is pseudo class ie
+
+nav :is(a:hover, a:focus){}
+*/
+
+nav a:hover,
+nav a:focus {
+    color: goldenrod;
+}
+
+
+nav a:active {
+    color: red;
+    text-decoration: underline;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/*card styling*/
+.card {
+    scroll-margin-top: 8rem;
+    width: min(100%, 350px);
+    background-color: var(--BGCOLOR);
+    border: var(--BDR);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card:target {
+    border: 4px solid black;
+}
+
+.card:nth-child(2) {
+    background-color: lightcoral;
+}
+
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card img {
+    border: 5px double darkmagenta;
+    border-radius: 50%;
+}
+
+/*selecting any img element inside the card that has an alt attribute
+.card img:not([alt]) filters out elements that do NOT have what is specified
+which in this case is al alt tag 
+*/
+.card img[alt] {
+    border: 10px solid crimson;
+}
+
+.card figcaption {
+    font-weight: bold;
+    font-size: large;
+    margin: 1rem;
+    text-align: center;
+}
+
+.card figcaption::after {
+    content: " MD ";
+}
+
+.card figcaption::first-letter {
+    text-decoration: line-through;
+    font-size: larger;
+}
+
+.card p::before {
+    content: open-quote;
+}
+
+.card p::after {
+    content: close-quote;
+}
+
+.square {
+    background-color: var(--BGCOLOR);
+}
+
+.sq-hi {
+    /*an example of redefining a variable*/
+    --BGCOLOR: red;
+}
+
+/*this styling get applied starting from the set width*/
+@media screen and (min-width:576px) {
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+
+    }
+
+    .card {
+        width: 100% 400px;
+    }
+
+    .card:last-child {
+        order: -1;
+    }
+
+}
+
+
+/* || MEDIUM */
+@media screen and (min-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .card {
+        width: min(100%, 325px);
+    }
+
+    .card figure {
+        flex-flow: column-reverse;
+    }
+
+    .card p {
+        margin-top: 1rem;
+    }
+}
+
+/* || LARGE */
+@media screen and (min-width: 992px) {
+    .card {
+        width: min(100%, 400px);
+    }
+
+    .card:nth-child(2) {
+        order: -1;
+    }
+}
+
+/* || XL  */
+@media screen and (min-width: 1200px) {
+    .card {
+        width: min(calc(33% - 1rem), 500px);
+    }
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+    }
+
+    .card {
+        width: min(calc(33% - 0.25rem), 200px);
+    }
+
+    .card :is(figcaption, p) {
+        font-size: 1.25rem;
+    }
+}

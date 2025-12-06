@@ -1,0 +1,123 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    text-decoration: underline;
+}
+
+.container {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    align-content: center;
+    height: 500px;
+}
+
+.flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    /* flex-grow: 1; */
+    margin: 3px;
+    /* flex-shrink: 0; */
+
+}
+
+.item-1 {
+    background-color: firebrick;
+    align-self: flex-start;
+    /* flex-grow: 4; */
+}
+
+.item-2 {
+    background-color: darkgoldenrod;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* flex-basis: 200px; */
+    align-self: flex-end;
+}
+
+.item-3 {
+    background-color: forestgreen;
+    order: 2;
+}
+
+.item-4 {
+    background-color: chocolate;
+    flex-shrink: 4;
+}
+
+.item-5 {
+    background-color: darkolivegreen;
+    order: 1;
+    align-self: center;
+}
+
+.item-6 {
+    background-color: darkorchid;
+    align-self: stretch;
+}
+
+.item-7 {
+    background-color: darkcyan;
+}
+
+.item-8 {
+    background-color: darkgrey;
+    order: -1;
+}
+
+.item-9 {
+    background-color: darkred;
+}
+
+.item-a {
+    background-color: black;
+}
+
+.item-b {
+    background-color: black;
+
+}
+
+.item-c {
+    background-color: black;
+}
+
+.item-d {
+    background-color: black;
+}
+
+.item-e {
+    background-color: black;
+}
+
+.item-f {
+    background-color: black;
+}
+
+.item-g {
+    background-color: black;
+}
+
+.item-h {
+    background-color: black;
+    align-items: flex-end;
+
+}
+
+.item-i {
+    background-color: black;
+}

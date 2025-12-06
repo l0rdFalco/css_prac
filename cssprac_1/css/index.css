@@ -1,0 +1,82 @@
+/* styling for element with said id*/
+#styledParaf3 {
+    background-color: rgb(180, 94, 151);
+    color: aliceblue;
+    font-size: large;
+    font-weight: bolder;
+    font-style: oblique;
+    margin-left: 12px;
+}
+
+h1 {
+    background-color: rgb(146, 83, 83);
+    background-image: linear-gradient(to bottom, rgb(10, 22, 10) 30%, rgb(82, 124, 82)70%, rgb(156, 216, 156) 100%);
+    color: wheat;
+    margin-top: 12px;
+    margin-right: 3px;
+    margin-bottom: 6px;
+    margin-left: 9px;
+    padding-top: 8px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+    padding-left: 5px;
+    border: 2px dashed rgb(14, 24, 14);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 4px 4px rgb(202, 199, 199);
+
+}
+
+div {
+    height: 600px;
+    border: 4px dotted rgb(172, 13, 13);
+    border-radius: 12px;
+    margin: 10px 20px;
+    padding: 2px 3px 4px 5px;
+    background-color: rgb(69, 92, 92);
+    background-image: url("../media/avatar.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+
+
+}
+
+span {
+    text-decoration: underline;
+    color: rgb(27, 24, 24);
+}
+
+ul {
+    padding: 10px;
+    margin: 10px;
+    border: 2px dotted rgb(44, 131, 36);
+    border-radius: 10px;
+}
+
+ul li:nth-child(odd) {
+    background-color: brown;
+    border: 2px dotted black;
+    color: wheat;
+}
+
+ul li:nth-child(even) {
+    background-color: rgb(58, 17, 33);
+    border: 2px dashed black;
+    color: wheat;
+
+}
+
+ul li:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+ol {
+    list-style-type: lower-greek;
+    list-style-position: outside;
+}
+
+.pic {
+    float: left;
+}

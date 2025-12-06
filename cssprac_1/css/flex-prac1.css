@@ -1,0 +1,74 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+/* responsive navbar */
+nav {
+    font-size: 2rem;
+    background-color: wheat;
+
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    border: 2px solid red;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+
+nav ul li {
+    cursor: pointer;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+
+}
+
+nav ul li:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+/* handles responsiveness */
+@media all and (max-width: 400px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
+
+/*centering flex items in a flex container*/
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    border: 2px solid green;
+}
+
+.flex-item {
+    background-color: black;
+    color: wheat;
+    padding: 5px;
+    width: 200px;
+    height: 20px;
+    border: 2px solid rgb(79, 79, 128);
+}
+
+.flex-item:hover {
+    background-color: blueviolet;
+    color: black;
+}

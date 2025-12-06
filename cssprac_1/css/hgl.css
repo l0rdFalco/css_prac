@@ -1,0 +1,83 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+body {
+    background-color: rgb(86, 20, 139);
+    display: flex;
+    min-height: 100vh;
+    /* above for Full viewport height */
+
+}
+
+
+.main-container {
+    display: flex;
+    background-color: rgb(87, 78, 67);
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+
+.header-container {
+    background-color: blueviolet;
+    margin: 3px;
+    display: flex;
+    font-size: large;
+    border: 3px solid red;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    background-color: rgb(86, 226, 43);
+    margin: 3px;
+    display: flex;
+    font-size: large;
+    border: 3px solid red;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.footer-container {
+    background-color: rgb(226, 141, 43);
+    margin: 3px;
+    display: flex;
+    font-size: large;
+    border: 3px solid red;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.sidebar-left-container {
+    border: 1px solid white;
+    margin: 5px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.sidebar-middle-container {
+    border: 1px solid white;
+    margin: 5px;
+    display: flex;
+    flex-grow: 4;
+}
+
+.sidebar-right-container {
+    border: 1px solid white;
+    margin: 5px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.center-children {
+    justify-content: center;
+    align-items: center;
+}

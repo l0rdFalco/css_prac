@@ -1,0 +1,358 @@
+/*start of css reset*/
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    /*gets rid of the space below images*/
+    display: block;
+    /*-------------------*/
+
+    max-width: 100%;
+    height: auto;
+
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/*variables*/
+:root {
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+    --BGCOLOR: orange;
+    --BGCOLOR-FADE: rgba(250, 194, 91, 0.986);
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --BODY-BGCOLOR: white;
+    --FONT-COLOR: black;
+    --BORDER-COLOR: gray;
+    --BORDERS: 1px solid var(--BORDER-COLOR);
+    --HIGHLIGHT-COLOR: green;
+    --LINK-COLOR: black;
+    --LINK-HOVER: rgb(80, 80, 80);
+    --LINK-ACTIVE: orange;
+    --HEADER-BGCOLOR: black;
+    --HEADER-COLOR: white;
+    --NAV-COLOR: white;
+    --PADDING-TB: 0.25em;
+    --PADDING-SIDE: 2.5%;
+    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+    --HERO-BGCOLOR: rgb(36, 223, 36);
+    --HERO-COLOR: white;
+
+
+}
+
+/*start of utility classes*/
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+/*start of general styling*/
+html {
+    background-color: var(--BGCOLOR);
+    background-image: var(--BGIMAGE);
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    background-color: var(--BODY-BGCOLOR);
+    color: var(--FONT-COLOR);
+    min-height: 100vh;
+    max-width: 800px;
+    border-left: var(--BORDERS);
+    border-right: var(--BORDERS);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+
+    display: flex;
+    flex-direction: column;
+    /*this centers the body element*/
+    margin: 0 auto;
+    /*-------------------*/
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2,
+h3 {
+    margin-bottom: 1em;
+    color: var(--HIGHLIGHT-COLOR);
+}
+
+p {
+    line-height: 1.5;
+}
+
+a:any-link {
+    color: var(--LINK-COLOR);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+/*start of header section*/
+.header__h1 {
+    text-align: center;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+
+}
+
+.header__nav {
+    background-color: var(--NAV-COLOR);
+    border-bottom: var(--BORDERS);
+    font-weight: bold;
+    box-shadow: 0px 6px 5px -5px var(--BORDER-COLOR);
+}
+
+.header__ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+
+    /*makes a space even on small screens*/
+    gap: 1rem;
+
+}
+
+/*start of hero section*/
+
+.hero {
+    position: relative;
+}
+
+.hero__h2 {
+    background-color: var(--HERO-BGCOLOR);
+    color: var(--HERO-COLOR);
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 5px var(--BORDER-COLOR);
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    animation: showWelcome 0.5s ease-in-out 1s forwards;
+
+
+}
+
+@keyframes showWelcome {
+    0% {
+        top: -20px;
+        transform: skew(0deg, -5deg) scaleY(0)
+    }
+
+    80% {
+        top: 30px;
+        transform: skew(10deg, -5deg) scaleY(1.2)
+    }
+
+    100% {
+        top: 20px;
+        transform: skew(-10deg, -5deg) scaleY(1)
+    }
+}
+
+/*start of main section*/
+
+.main {
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+    flex-grow: 1;
+}
+
+.main__article {
+    scroll-margin-top: 6.5rem;
+    margin: var(--MARGIN);
+}
+
+.main__article:first-child {
+    margin-top: 1em;
+
+}
+
+.main__article:last-child {
+    margin-top: 1em;
+    min-height: calc(100vh -20rem);
+}
+
+/*start with about section*/
+.about {}
+
+.about__trivia {
+    margin: var(--MARGIN);
+
+}
+
+.about__answer {
+    margin-top: 1em;
+}
+
+
+/*start of contact section */
+.contact__h2 {
+    margin: 0;
+}
+
+.contact__form {}
+
+.contact__fieldset {
+    border: none;
+}
+
+.contact__p {
+    margin: 1em 0;
+}
+
+.contact__label {
+    display: block;
+    font-weight: bold;
+}
+
+.contact__input,
+.contact__textarea {
+    padding: 0.5em;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 100%;
+}
+
+
+.contact__button {
+    padding: 0.5em;
+    border-radius: 15px;
+    background-color: var(--HIGHLIGHT-COLOR);
+    color: var(--HEADER-COLOR);
+}
+
+
+/*start of menu section*/
+
+thead,
+tbody,
+tfoot,
+tr {
+    display: contents;
+
+}
+
+.menu__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1em;
+    margin-bottom: 1em;
+    grid-template-areas:
+        "hd1 hd2 hd3"
+        "cr cr1 cr1p"
+        "cr cr2 cr2p"
+        "cr cr3 cr3p"
+        "sf sf1 sf1p"
+        "sf sf2 sf2p"
+        "sf sf3 sf3p"
+        "cs cs cs";
+
+}
+
+.menu__cr {
+    grid-area: cr;
+}
+
+.menu__soft {
+    grid-area: sf;
+}
+
+.menu__cs {
+    grid-area: cs;
+}
+
+.menu__cs,
+.menu__cr,
+.menu__soft,
+.menu__header {
+    color: var(--HIGHLIGHT-COLOR);
+    font-weight: bold;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.menu__header,
+.menu__item {
+    width: 100%;
+    padding: 1em;
+    border: medium solid var(--BORDER-COLOR);
+}
+
+.menu__item {
+    display: grid;
+    place-content: center;
+}
+
+thead th:first-child {
+    border-top-left-radius: 15px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 15px;
+}
+
+tfoot td {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/*start of footer section*/
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--HEADER-BGCOLOR);
+    color: var(--HEADER-COLOR);
+    text-align: center;
+    padding: var(--PADDING-TB) var(--PADDING-SIDE);
+
+}
+
+@media screen and (min-width: 576px) {
+
+    .header__h1::before,
+    .header__h1::after {
+        content: " 🌮 "
+    }
+}

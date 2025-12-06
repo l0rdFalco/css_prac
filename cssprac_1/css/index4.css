@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.clear {
+    clear: both;
+}
+
+
+header,
+section,
+article,
+aside,
+nav,
+footer {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px dotted brown;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: center;
+    border: 1px dotted brown;
+
+}
+
+thead {
+    background-color: rgb(72, 72, 145);
+
+}
+
+thead:hover {
+    background-color: yellowgreen;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgb(127, 143, 143);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(46, 105, 105);
+}
+
+tbody tr:hover {
+    background-color: blueviolet;
+
+}

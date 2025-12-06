@@ -1,0 +1,145 @@
+div {
+    border: 2px double rgb(28, 31, 65);
+    border-radius: 6px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+div p {
+    background-color: rgb(32, 172, 62);
+    color: rgb(37, 35, 35);
+    margin: 12px;
+    padding: 12px 10px;
+    border: 2px double goldenrod;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/*all paragraphs with a parent of given class*/
+.purple p {
+    background-color: purple;
+    color: rgb(212, 90, 90);
+    margin: 12px;
+    padding: 12px 10px;
+    border: 2px double goldenrod;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* all paragraph elements with a parent with given id*/
+#grey p {
+    background-color: rgb(189, 189, 187);
+    color: rgb(212, 90, 90);
+    margin-top: 12px;
+    padding: 12px;
+    border: 2px double goldenrod;
+    border-radius: 6px;
+    text-align: center;
+
+}
+
+/*dont work on #grey p because of specificity hierarchy*/
+p:hover {
+    background-color: rgb(255, 185, 127);
+    border: 3px dotted black;
+}
+
+/*styles the first letter of text in each paragraph element*/
+p:first-letter {
+    font-weight: bolder;
+    font-size: x-large;
+    color: rgb(101, 198, 211);
+}
+
+/*styles the first line of text in each paragraph element*/
+p:first-line {
+    background-color: rgb(19, 45, 119);
+    color: white;
+}
+
+/*styles the first child  and last child paragraph */
+div p:first-child,
+p:last-child {
+    border: 8px dotted red;
+    text-decoration: line-through;
+}
+
+p:before {
+    content: "123"
+}
+
+p:after {
+    content: "abcdef"
+}
+
+#grey p:nth-child(n+2):not(:last-child) {
+    background-color: black;
+}
+
+a {
+    color: aqua;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+a:visited {
+    color: brown;
+}
+
+/*activated onmousedown on anchor text*/
+a:active {
+    color: beige;
+}
+
+.left-col {
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(167, 140, 54);
+    border: 3px double blue;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-col {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    background-color: rgb(160, 41, 41);
+    border: 3px double blue;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-col {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    background-color: rgb(58, 134, 55);
+    border: 3px double blue;
+    border-radius: 12px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.parentcont {
+    border: 2px dotted red;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    /* above rule forHorizontal centering */
+    align-items: center;
+    /*above rule for Vertical centering */
+    height: 300px;
+    /* Parent needs a defined height */
+}

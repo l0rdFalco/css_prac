@@ -1,0 +1,23 @@
+.container {
+    font-size: 18px;
+    border: 1px solid saddlebrown;
+    display: flex;
+}
+
+.items {
+    border: 1px solid goldenrod;
+    padding: 10px;
+    margin: 2px;
+
+}
+
+.item1 {
+    background-color: blanchedalmond;
+
+
+}
+
+.item2 {
+    background-color: forestgreen;
+
+}

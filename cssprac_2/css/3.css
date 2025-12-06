@@ -1,0 +1,220 @@
+* {
+
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 750vh;
+}
+
+p {
+    border: 1px solid palevioletred;
+}
+
+.opposite {
+    /* 
+    how to change an inline element to block level
+    display: inline-block;
+    width: 100%;
+    */
+    margin-top: 15px;
+    border: 1px solid green;
+    background-color: red;
+}
+
+ul {
+    border: 1px solid green;
+    text-align: right;
+
+}
+
+li {
+    display: inline-block;
+    background-color: blueviolet;
+    margin-inline: 0.5rem;
+    padding: 0.3rem;
+}
+
+a {
+    color: rgb(185, 107, 107);
+    text-decoration: none;
+}
+
+
+li:hover,
+li:focus {
+    background-color: yellowgreen;
+    text-decoration: underline;
+}
+
+.content-container {
+    width: 15vw;
+    height: 15vw;
+    background-color: rgb(189, 182, 182);
+    border: 3px solid yellow;
+    padding: 1rem;
+}
+
+.left {
+    float: left;
+    margin-right: 1rem;
+}
+
+
+.right {
+    float: right;
+    margin-left: 1rem;
+}
+
+.columns {
+    column-count: 4;
+    column-width: 250px;
+    column-rule: 3px solid slateblue;
+    column-gap: 1rem;
+
+}
+
+section {
+    height: 100vh;
+    border: 3px outset royalblue;
+}
+
+section p:nth-child(2) {
+    margin-top: 0px;
+}
+
+.columns div {
+    break-inside: avoid;
+    break-before: column;
+}
+
+.columns .quote-styles {
+    font-size: 3rem;
+    text-align: center;
+    color: chocolate;
+    column-span: all;
+}
+
+.outer-container {
+    border: 3px dashed coral;
+    width: 75vh;
+    height: 95vh;
+    margin: 2rem auto;
+}
+
+.inner-container {
+    border: 3px solid hotpink;
+    width: 45vh;
+    height: 45vh;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.box {
+    width: 4rem;
+    height: 4rem;
+    border: 3px solid lightblue;
+    padding: 1rem;
+
+}
+
+.absolute {
+    /*relative to inner-container*/
+    background-color: paleturquoise;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+}
+
+.relative {
+    background-color: black;
+    color: wheat;
+    position: relative;
+    top: 10px;
+    left: 200px;
+    z-index: 1;
+}
+
+.fixed {
+    background-color: seagreen;
+    color: wheat;
+    position: fixed;
+    top: 1px;
+    left: 3px;
+    z-index: 2;
+    display: none;
+}
+
+.sticky {
+    background-color: lightcyan;
+    color: firebrick;
+    position: sticky;
+    top: 60px;
+}
+
+.custom-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, red, blue);
+    margin: 2rem 0;
+}
+
+.blue {
+    background-color: darkblue;
+    color: linen;
+}
+
+.brown {
+    background-color: brown;
+    color: linen;
+
+}
+
+.green {
+    background-color: green;
+    color: linen;
+}
+
+header,
+footer {
+    color: tomato;
+    text-align: center;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+footer {
+    background-color: darkolivegreen;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.social {
+    background-color: royalblue;
+    color: bisque;
+    font-size: x-large;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    padding: 1rem;
+    z-index: 1;
+    border-radius: 50%;
+
+}
+
+.social:hover {
+    background-color: navajowhite;
+    color: bisque;
+}
