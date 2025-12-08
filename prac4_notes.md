@@ -146,3 +146,25 @@ this is where selectors are comma separated to share a declaration block
 ### pseudo classes
 
 The three types to be discussed include pseudo-classes, state pseudo-classes and conditional pseudo-classes
+
+these define styles for a specific state or condition of a html element
+examples of state can he selected or not,
+examples of condition can be odd or even rows on a table
+
+in css, a pseudo-class is repesented as a colon keyword at the end of a selector e.g a:hover
+
+### state pseudo-clases
+are important for dymanic styling based on user interactions. They are commonly used for hyperlinks
+
+the main pseudo-classes used for hyperlinks include:
+:link -  targets hyperlinks that havent been clicked
+:visited - targets hyperlinks that have been clicked
+:hover - targets an element when the cursor is placed over it
+:active - targets an element when it is being clicked
+
+_:link and :visited_ are specific to anchor tags
+_:hover and :active_ aren't specific to anchor tags
+
+
+### conditional pseudo-classes 
+this are used in styling based in an element's position in relation to other elements e.g :first-child, nth-child(n) etc

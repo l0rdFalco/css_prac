@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+h1{}
+h2{}
+
+ul{}
+li{}
+a{}
+body{}
+
+header{}
+section{}
+nav{}
+
+.header-title-line{}
+.menu-button{}
+.menu-icon{}
+
+.main-container{}
+.left-column{}
+.center-column{}
+.right-column{}
+.left-a{}
+.left-b{}
+.left-c{}
+.center-a{}
+.center-b{}
+.center-c{}
+.right-a{}
+.right-b{}
+.right-c{}
+
+.table-container{}
+table{}
+thead{}
+tbody{}
+th{}
+tr{}
+td{}
+
+footer{}
+.footer-left{}
+.footer-center{}
+.footer-right{}
