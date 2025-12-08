@@ -154,10 +154,11 @@ examples of condition can be odd or even rows on a table
 in css, a pseudo-class is repesented as a colon keyword at the end of a selector e.g a:hover
 
 ### state pseudo-clases
+
 are important for dymanic styling based on user interactions. They are commonly used for hyperlinks
 
 the main pseudo-classes used for hyperlinks include:
-:link -  targets hyperlinks that havent been clicked
+:link - targets hyperlinks that havent been clicked
 :visited - targets hyperlinks that have been clicked
 :hover - targets an element when the cursor is placed over it
 :active - targets an element when it is being clicked
@@ -165,35 +166,58 @@ the main pseudo-classes used for hyperlinks include:
 _:link and :visited_ are specific to anchor tags
 _:hover and :active_ aren't specific to anchor tags
 
+### conditional pseudo-classes
 
-### conditional pseudo-classes 
 this are used in styling based in an element's position in relation to other elements e.g :first-child, nth-child(n) etc
 
 ### combinator selectors
-these combine 2 or more selectors to target elements baed on thier positions relative to each other. 
+
+these combine 2 or more selectors to target elements baed on thier positions relative to each other.
 The 4 subtypes include
+
 1. descendant/child selector e.g. parent child
 2. direct descendant/child selector e.g parent > child
 3. adjascent sibling selector e.g parent + child
 4. general sibling selector e.g. parent ~ child
 
 ### descendant/child selector
+
 this targets all children elements of a parent. This means all children and grandchildren.
 The parent and child can be any of the CSS selectors known
 
-
 ### direct descendant selector
+
 this targets direct children elements of the parent. Ignores grandchildren.
 
 ### adjacent sibling selector
+
 this targets an element directly after another element both nested within the same parent e.g h1 + p
 
 the first selector, h1 in this case, is called the _preceding sibling_
 the second selector, p in this case, is called the _adjasent siblinng_
 
-
 ### general sibling selector
-this targets multiple elements  directly after another element both nested within the same parent e.g. h1 ~ p
+
+this targets multiple elements directly after another element both nested within the same parent e.g. h1 ~ p
 the first selector, h1 in this case, is called the _preceding sibling_
 the second selector, p in this case, is called the _subsequent siblinngs_
 
+### SPECIFICITY
+
+the cascade is where styles declared later will take priority when selectors are the same
+
+when styles are applied to the same element using a a different type of selector, the final outcome is determined by specificity
+
+specificity determines the priority of a css rule when multiple rules apply to the same element
+
+specificity calculators are at times used to find out which styles are applied
+
+It is common to use the type selector for global styles and the class selector to override the aforementioned for more specific styling
+
+### INHERITANCE
+
+properties set on parent elements are passed to their children by default
+
+specific selectors will override inherited styles. This is because inherited styles have a very low specificity
+
+start from 3:37:00
