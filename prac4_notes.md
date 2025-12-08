@@ -220,4 +220,22 @@ properties set on parent elements are passed to their children by default
 
 specific selectors will override inherited styles. This is because inherited styles have a very low specificity
 
-start from 3:37:00
+it is mainly text properties that are inherited. e.g color, font, font-family, font-size, font-style. A complete list is a deepseek question away
+
+global font styles are set on the body element so that all child text elements inherit said styles by default
+
+inheritance is also used for a container that requires specific text styling
+
+we have  already seen that text-align affects block-level elements and has no impact on inline-level elements.
+
+
+when appling the text-align property on a block level parent e.g. a div that contains inline elements e.g img, all the children will be centered.
+This is because the block level children will not move since they already occupy the full width
+the inline-level elements will be centered because there's is space for them to move
+
+secondly since the text-align element is inherited by the children, the text is centered in the block level elements. text inside the inline-level element stays where it is since there is no space to move
+
+the universal selector is primarily used for setting default properties and not for applying styling
+
+### pseudo-elements
+these are used to style specific parts of an element
