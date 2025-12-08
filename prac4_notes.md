@@ -168,3 +168,32 @@ _:hover and :active_ aren't specific to anchor tags
 
 ### conditional pseudo-classes 
 this are used in styling based in an element's position in relation to other elements e.g :first-child, nth-child(n) etc
+
+### combinator selectors
+these combine 2 or more selectors to target elements baed on thier positions relative to each other. 
+The 4 subtypes include
+1. descendant/child selector e.g. parent child
+2. direct descendant/child selector e.g parent > child
+3. adjascent sibling selector e.g parent + child
+4. general sibling selector e.g. parent ~ child
+
+### descendant/child selector
+this targets all children elements of a parent. This means all children and grandchildren.
+The parent and child can be any of the CSS selectors known
+
+
+### direct descendant selector
+this targets direct children elements of the parent. Ignores grandchildren.
+
+### adjacent sibling selector
+this targets an element directly after another element both nested within the same parent e.g h1 + p
+
+the first selector, h1 in this case, is called the _preceding sibling_
+the second selector, p in this case, is called the _adjasent siblinng_
+
+
+### general sibling selector
+this targets multiple elements  directly after another element both nested within the same parent e.g. h1 ~ p
+the first selector, h1 in this case, is called the _preceding sibling_
+the second selector, p in this case, is called the _subsequent siblinngs_
+

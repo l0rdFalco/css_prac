@@ -91,9 +91,6 @@ p {
   font-size: 20px;
 }
 
-p:active{
-  color: goldenrod;
-}
 
 a {
   text-decoration: none;
@@ -135,3 +132,12 @@ ul {
 
 }
 
+/* h1 + p {
+color: wheat;
+text-decoration: underline seagreen;
+} */
+
+/* h1 ~ p {
+color: wheat;
+text-decoration: underline seagreen;
+}  */
