@@ -238,4 +238,16 @@ secondly since the text-align element is inherited by the children, the text is 
 the universal selector is primarily used for setting default properties and not for applying styling
 
 ### pseudo-elements
-these are used to style specific parts of an element
+these are used to style specific parts of an element. It is made up of a double colon after a selector
+
+pseudo-elements for text styling. They include:
+::first-letter - used to create a drop cap
+::first-line
+::selection - used to enhance the text a user selects
+
+pseudo-elements for content insertion. used for adding decorative elements without alterting html structure. They include:
+::before - adds insertaion before the targeted element
+::after - adds insertion after the targeted element
+
+
+### CSS BOX MODEL

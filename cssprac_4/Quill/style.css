@@ -130,18 +130,36 @@ ul {
   color: #7048e8;
 }
 
-/* h1 + p {
+/* 
+h1 + p {
 color: wheat;
 text-decoration: underline seagreen;
-} */
+} 
 
-/* h1 ~ p {
+h1 ~ p {
 color: wheat;
 text-decoration: underline seagreen;
-}  */
+} 
+ */
 
 .hero-section,
 .cta-section,
 .footer-section {
   text-align: center;
+}
+
+p::selection{
+  background-color: #9775fa;
+  color: white;
+}
+
+h1::before{
+  content:'😊';
+  font-size: 40px;
+  color: powderblue;
+}
+h1::after{
+  content:'😊';
+  font-size: 40px;
+  color: powderblue;
 }
