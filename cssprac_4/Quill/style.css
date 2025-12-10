@@ -58,6 +58,13 @@ body {
   color: #495057;
 }
 
+.main-container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid rosybrown;
+}
+
 h1,
 h2,
 h3,
@@ -200,21 +207,19 @@ text-decoration: underline seagreen;
   margin-bottom: 50px;
 }
 .cta-section {
-  border: 1px solid red;
   margin-bottom: 300px;
 }
 
 .cta-card {
-  width: 1000px;
   padding: 100px 200px;
   background-color: #339af0;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
 .cta-heading {
   margin-bottom: 20px;
 }
-
 
 p::selection {
   background-color: #9775fa;
@@ -271,7 +276,8 @@ h2 > span {
 }
 
 .feature-img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .social-icons {
@@ -286,7 +292,6 @@ h2 > span {
   margin-bottom: 300px;
 }
 
-.feature-headings{
+.feature-headings {
   margin-bottom: 20px;
 }
-

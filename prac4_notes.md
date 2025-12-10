@@ -300,18 +300,35 @@ inline: default value for inline elements
 inline-block: combines features of block and inline elements. Just like in inline elements, these elements dont start on a new line and the default width is the width of the content. Just like in block, width and height can be set, padding, border and margin applies as expected.
 display: inline-block; essentially allows us to add block properties to inline elements
 This can be used when you need inlin elements to appear next to each other e.g buttons, animating a single word in a sentence etc.
-This means that inline-block is applied to most inline elements in a webpage
+This means that inline-block is applied to most inline elements in a webpage.
 
-*replaced inline elements* include input, text-area img, select etc. because the given html tag is replaced with the associated html when the page is rendered. Box model properties apply to them even though they are technicallly inline elements
+*replaced inline elements* include input, text-area img, select etc. because the given html tag is replaced with the associated html when the page is rendered. Box model properties apply to them even though they are technicallly inline elements.
 
 
 ### CSS RESET
 browsers have built in rules that style each element.
-The universal selector is used to remove all padding and margin from all elements
+The universal selector is used to remove all padding and margin from all elements.
 
 element resets can also be used on the various element selectors e.g. removing the bullets from ul elements using list-style:none;
 
-aside from resetting, one can use *normalize.css* that sets default styling for elements. It is essentially a css file with default values for all elements. It's aim is cross-browser compatibility
+aside from resetting, one can use *normalize.css* that sets default styling for elements. It is essentially a css file with default values for all elements. It's aim is cross-browser compatibility.
+
+### max-width & max-height
+max width ensures elements are responsive for different screen sizes
+
+for block-level elements, if the viewport shrinks below what is set in max-width, the element width becomes the width of the viewport/parent. On the other hand, it wont go beyond the set value if the viewport/parent container expands
+
+fir inline-level elements, the max-width value stays constant if the viewport shrinks below the set number. It like max-width has no impact on an inline element
+
+adding max-width on images creates a responsive layout
+
+
+max width behaves differently depending on the value of the display property.
+
+max-width can be used on the main container to ensure that content does not go too wide on larger screens.
+
+
+start from 7:30:00
 
 
 
