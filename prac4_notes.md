@@ -226,8 +226,7 @@ global font styles are set on the body element so that all child text elements i
 
 inheritance is also used for a container that requires specific text styling
 
-we have  already seen that text-align affects block-level elements and has no impact on inline-level elements.
-
+we have already seen that text-align affects block-level elements and has no impact on inline-level elements.
 
 when appling the text-align property on a block level parent e.g. a div that contains inline elements e.g img, all the children will be centered.
 This is because the block level children will not move since they already occupy the full width
@@ -238,6 +237,7 @@ secondly since the text-align element is inherited by the children, the text is 
 the universal selector is primarily used for setting default properties and not for applying styling
 
 ### pseudo-elements
+
 these are used to style specific parts of an element. It is made up of a double colon after a selector
 
 pseudo-elements for text styling. They include:
@@ -249,5 +249,72 @@ pseudo-elements for content insertion. used for adding decorative elements witho
 ::before - adds insertaion before the targeted element
 ::after - adds insertion after the targeted element
 
-
 ### CSS BOX MODEL
+
+All html elements are treated as rectangular boxes. EACH box has it's own set of properties which include:
+content, border, padding, margin, height, width.
+
+the background-color property sets the background color of an element and applies it to the content and padding. It is sometimes used to set the background color of an entire page or of page sections.
+It is not to be confused with the color property which applies to text elements
+
+by default, block level elements are just big enough to fit its contents vertically and stretches full width horizontally
+
+by default, inline-level elements are just big enough to fit its contents vertically and horizontally
+
+default box dimensions can be overriden by the width and height properties
+
+for _h1, p, ul and li elements_, the height isn't explicitly set; it is determined by font size, padding and margin values
+the width is also not set because as block-level elements, they stretch to fill the parent container
+
+for container elements _like div and section_, the height is not usually set; the contents determine it.
+the width can be set depending on the layout
+
+width and height can be set on _some_ inline elements but not others. The ones that can get the height declaration inclide _img, input, select, textarea and button_
+
+elements where you can't apply height include _span, a, sub and sup_
+
+padding is usually used to improve readability
+
+the best way to handle dimensions on an element is:
+
+1. set a width
+2. let the height be calculated using the heights of the children
+3. adding padding where necessary
+
+
+### box sizing
+by default, the total width and height of a box is the sum of the cotent width and height, padding and border
+the box-sizing property modifies how the total width and height of an element are calculated. The 2 values are:
+*content-box:* dimensions are calculated by adding the width(or height) + padding + border width
+*border-box:* the calculated height (or width) all add up to the set values. the content dimensions are recalculated 
+this property is best set on the universal selector
+
+inline elements do not follow box model rules so applying some properties do not work as expected e.g like when applying width to an anchor tag
+
+margin and padding in inline elements only works horizontally
+
+the display property sets how the associated element is formatted and positioned. The available values for this property are _inline, inline-block block, flex and grid_
+
+block: default value for block elements
+inline: default value for inline elements
+inline-block: combines features of block and inline elements. Just like in inline elements, these elements dont start on a new line and the default width is the width of the content. Just like in block, width and height can be set, padding, border and margin applies as expected.
+display: inline-block; essentially allows us to add block properties to inline elements
+This can be used when you need inlin elements to appear next to each other e.g buttons, animating a single word in a sentence etc.
+This means that inline-block is applied to most inline elements in a webpage
+
+*replaced inline elements* include input, text-area img, select etc. because the given html tag is replaced with the associated html when the page is rendered. Box model properties apply to them even though they are technicallly inline elements
+
+
+### CSS RESET
+browsers have built in rules that style each element.
+The universal selector is used to remove all padding and margin from all elements
+
+element resets can also be used on the various element selectors e.g. removing the bullets from ul elements using list-style:none;
+
+aside from resetting, one can use *normalize.css* that sets default styling for elements. It is essentially a css file with default values for all elements. It's aim is cross-browser compatibility
+
+
+
+
+
+
