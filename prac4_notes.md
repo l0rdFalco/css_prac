@@ -418,6 +418,25 @@ vh is used with min-height to makesure that certain important content is always 
 vw is used for creating responsive text when not confined within a container
 
 
+## CSS Functions and variables
+these are used to create dymamic values for various properties
+
+
+css variables are also known as custom properties and are defined with the syntax _--varname: value;_ and it is used with the syntax _var(--varname)_
+
+the variables are defined  in the :root{} pseudoclass
+:root is a pseudo-class selector that matches the root element in a document's hierarchy. 
+:root pseudoclass and html selector are essentially the same thing but it is best practice to use :root to define variables
+
+### CSS calculations
+one uses the calc() function.
+css variables and calculation are commonly used together
+
+
+
+
+
+
 
 
 
