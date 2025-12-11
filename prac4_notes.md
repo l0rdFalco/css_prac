@@ -313,22 +313,45 @@ element resets can also be used on the various element selectors e.g. removing t
 
 aside from resetting, one can use *normalize.css* that sets default styling for elements. It is essentially a css file with default values for all elements. It's aim is cross-browser compatibility.
 
-### max-width & max-height
-max width ensures elements are responsive for different screen sizes
+### max-width & min-width
+max-width ensures elements are responsive for different screen sizes
 
 for block-level elements, if the viewport shrinks below what is set in max-width, the element width becomes the width of the viewport/parent. On the other hand, it wont go beyond the set value if the viewport/parent container expands
 
-fir inline-level elements, the max-width value stays constant if the viewport shrinks below the set number. It like max-width has no impact on an inline element
+fir inline-level elements, the max-width value stays constant if the viewport shrinks below the set number. It like max-width has no impact on an inline element.
 
-adding max-width on images creates a responsive layout
+adding max-width on images creates a responsive layout.
 
-
-max width behaves differently depending on the value of the display property.
+max-width and min-width behave differently depending on the value of the display property.
 
 max-width can be used on the main container to ensure that content does not go too wide on larger screens.
 
+min-width sets an element's width that it won't shrnk below.
 
-start from 7:30:00
+min-width is useful for maintaining a section width in a grid layout so that it doesn't become too narrow.
+
+it is used a lot in span elements as it ensures that text does not become too narrow and also improves visual consistency.
+
+### min-height & max-height
+
+max-height sets a height value that the element won't exceed. 
+max-width and max-height work differently.
+max-width is based in its container so it applies even without content. On the other hand, it only applies when content exceeds the set limt. If there is no content and no height and a set max-height value, the element won't be visible (height:0;)
+
+since content will overflow if it is larger than the max-height, the *overflow* property comes into play
+some values of overflow include:
+1. hidden: any overflowing content will be cut out
+2. visible: overflow can happen (default value)
+3. scroll: introduces a scrollbar that will aways be present
+4. auto:: introduces a scrollbar only when necessary
+
+max-height is used to ensure elements do no exceed a certain height value e.g. on modal windows
+with min-height, the element can expand to fit the element if it exceeds the set min-height value.
+you use min-height to ensure an element doesnt exceed a certain value regardless of the content
+
+
+
+
 
 
 
