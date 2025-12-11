@@ -350,6 +350,86 @@ with min-height, the element can expand to fit the element if it exceeds the set
 you use min-height to ensure an element doesnt exceed a certain value regardless of the content
 
 
+### CSS UNITS
+absolute units is when the size is fixed and doesn't change in relation to parent elements e.g. _px, pt, in, cm,mm_
+relative units allow for responsiveness across various screen sizes. they include _%, rem, em, vh, vw_.
+Relative units are used on cotainers, box-model properties and font-size
+
+pixels are used in the following areas:
+- border
+- border radius
+- letter spaciging
+- logos and icons
+- max-width
+- shadows
+
+percentages aer mainly used in:
+- main containers
+- images
+- border radius (for fully rounded corners)
+
+rems are usually used in
+- text
+- margin
+- padding
+
+ems are usually used in:
+- margin
+- padding
+
+vh is usually used in:
+section/div height
+
+vw is usually used in text(uncommon)
+
+
+
+
+### percentages
+percentages are either relative to a parent or to the element itself
+
+percentages are used with max-width in _main containers and images_ to maintain full responsiveness
+
+it is common to set images inside a grid or flex container to 100% so that it fills the cell and adapts responsively
+
+at times, one sets button width to 100% relative to its parent for responsiveness
+
+percentages are also used for making circular elements
+
+
+### em & rem
+rems are relative to the root element (ie the html tag) and are the major tool to achieve responsiveness. the font size of the root element is 16 px. This means that using rem, dimensions are a multiple of 16.
+
+rems are used for responsiveness with media queries. For differing screen sizes, the font size in the html tag is changed which then cases all rem values to be recalculated automatically. 
+
+changing the font-size to 62.5% allows the font size of the website to scale if the user manually updates the browser font size.
+
+they are mostly used on font-size, margins and paddings for responsiveness.
+
+The ems calculations are based on the parent and not the root element. 
+ems are used in typography where the element being styled is relative to the font-size of the parent. they are usually found in font-size, line-height, letter-spacing and box-model properties
+
+ems provide a higher level of precision forstyling smaller componenets as sizing is based in the font-size of the element itself
+
+### vw & vh
+these are units that are a percentage of the browser's viewport as opposed rems that are a percentage of a parent element
+vh is used with min-height to makesure that certain important content is always above the fold.
+
+vw is used for creating responsive text when not confined within a container
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
