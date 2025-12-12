@@ -55,7 +55,9 @@ margin: 10px auto means that make margin-top and margin-bottom 10px and margin-l
 
 **border-collapse: collapse;** on the table css selector makes table have a single line aside from the double lines with border=1
 
-## FLEXBOX
+## FLEXBOX:
+
+https://www.youtube.com/playlist?list=PLC3y8-rFHvwg6rjbiMadCILrjh7QkvzoQ
 
 the flexible box module is a one dimensional layout mode that makes it easy to:
 
@@ -73,7 +75,7 @@ b4 flexbox there were other layout modes:
 6. container queries
 7. subgrids/nested grids
 8. floats
-9. multicolum layout
+9. multicolumn layout
 
 flexbox was designed to provide the flexibility absent in the aforementioned
 
@@ -99,6 +101,10 @@ flexbox was designed to provide the flexibility absent in the aforementioned
 5. _justify-content_ : determines alignment of items along the main axis
 6. _align-items_ : defines how flex items are laid out along cross axis. only works with dealing with a single line
 7. _align-content_ : determines alignment of items along the cross axis. works when dealing with when multiple rows and flex-wrap: wrap;
+8. _row-gap_: sets vertical spacing between rows
+9. _column-gap_: sets horizontal spacing between columns
+10. _gap_: combines row-gap and column-gap results in equal spacing between all items
+
 
 ### 2. display
 
@@ -120,7 +126,7 @@ The values for flex-direction include:
 
 - row: default value. causes main axis to flow left to right
 - row-reverse: causes main axis to flow right to left
-- column. causes main axis to flow top to botton
+- column: causes main axis to flow top to botton
 - column-reverse: causes main axis to bottom to top
 
 ### 4. flex-wrap
@@ -154,7 +160,7 @@ The values expected include:
 there are also other values that determine how space between flex items is distributed. they include:
 
 - **space-between**: remaining space is divided evenly between flex items.
-- **space-around**: remaining space is divided evenly between flex items including before and after fist and last items respectively. the spaces before and after is equal to have the space between items.
+- **space-around**: the available space in the flex container is divided into equal parts to fit the number of flex items. Each flex-item is then centered in this space. This means that spacing between items and the edge of the container isn't equal
 - **space-evenly**: remaining space is divided evenly between flex items including before and after. all spaces are equal.
 
 ### 7. align-items

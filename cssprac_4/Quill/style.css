@@ -72,14 +72,10 @@ body {
 .main-container {
   /* width: 90vw; */
   width: 90%;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto; /*centers container horizontally*/
   border: 0.0625rem solid rosybrown; /* 1px converted to rem */
 }
-
-
-
-
 
 h1,
 h2,
@@ -207,16 +203,39 @@ text-decoration: underline seagreen;
 */
 
 .navbar {
-  height: var(--nav-height);
+  /* height: var(--nav-height); removed after adding flexbox */
   margin-bottom: 10rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid greenyellow;
+}
 
+.nav-auth {
+  display: flex;
+  gap: 1rem;
 }
 
 .hero-section,
 .cta-section,
 .footer-section {
-  text-align: center;
-  border: 1px solid saddlebrown
+  /* text-align: center;  removed in favour of align-items:center*/
+  border: 1px solid saddlebrown;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; not necessary because there's no space */
+}
+
+.footer-socials,
+.footer-auth {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .hero-section {

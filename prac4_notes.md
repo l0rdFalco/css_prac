@@ -432,6 +432,54 @@ the variables are defined  in the :root{} pseudoclass
 one uses the calc() function.
 css variables and calculation are commonly used together
 
+### FLEXBOX
+This is a one dimensional layout model that makes it easy to arrange items in rows/columns and to distrubute viewport space.
+there is a flex tag in the html in the dev console when a layout has flexbox activated
+
+flexbox has 2 main components:
+*flex container*: this is the parent element
+*flex items*: these are the children of the flex container
+
+the _display:flex;_ declaration on the flex container activates flexbox layout features on it's direct children elements, *NOT the grandchildren*!
+
+in normal flow (when not using flexbox) the display property is set on the elements itself while when using flexbox, the display:flex; property is set on the flex container.
+
+by default, the flex items are going to stack horizontally
+
+_main axis_: the primary direction in which flex items are laid out
+
+_cross axis_: determines distribution on the secondary axis
+
+_flex direction_: it is set on the flex container and controls the orientation of the main axis. The values it can have are:
+1. *row*: default value. flex items go left to right in a row
+2. *row-reverse*: flips the main axis so that items go from right to left. The cross axis goes top to bottom
+3. *column*: makes the main axis go from top to bottom
+4. *column-reverse*: flips the main axis so that items go from bottom to top. Whith the cross axis going left to right
+
+row and column are the most common flex-direction properties
+
+### normal flow vs flexbox
+in normal flow, spacing and alignment are determined by the inherent properties of the elements in question (block or in-line)
+On the other hand, flexbox overrides default behavior of block and inline elements with spacing and alignment controlled by flexbox properties
+
+in normal flow applying  text-align to a block-level parent element _will center both block and inline children_ through different mechanisms
+
+display:flexbox; on  a flex container *overrides* display behaviour of block and inline elements. UNder this model, children are not seen as block or incline elements anymore; they become flex items. This  means that box model properties can apply to inline elements 
+Also in flexbox, text-align will not work as it did in block payout since there are other ways to align children in flexbox
+
+### justify-content
+understanding a flex container's dimensions is essential for visualising how flex items will be positioned
+
+it is important to know where the space is in the flex container because it determines where and how items will move
+
+the justify-content property is set on the container determines how flex items are positioned along the main axis. 
+The six values it takes are _flex-start, flex-end, center, space-between, space-around and space-evenly_
+
+### align-items
+
+
+
+
 
 
 
