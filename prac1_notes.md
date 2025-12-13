@@ -105,7 +105,6 @@ flexbox was designed to provide the flexibility absent in the aforementioned
 9. _column-gap_: sets horizontal spacing between columns
 10. _gap_: combines row-gap and column-gap results in equal spacing between all items
 
-
 ### 2. display
 
 Makes a block level or inline level flex container depending on the value entered.
@@ -135,11 +134,14 @@ controls the wrapping of flex items within the flex container
 
 by default, all flex items will try to fit in a single line and overflow if space runs out.
 
-flex-wrap allows flex items to flow to a new line instead of overflowing out of sight
+flex-wrap allows flex items to flow to a new line instead of overflowing out of sight.
+when flex-wrap is set to wrap or wra-reverse and the parent has no set, height, _the parent will expand_ to allow the wrapping behaviour
+
+if there is a set height, the row is divided equally and the overflowing elements stack up from the start of the second row
 
 the values of flex-srap include:
 
-- nowrap: default value
+- nowrap: default value (overflow)
 - wrap:
 - wrap-reverse:
 
@@ -165,17 +167,20 @@ there are also other values that determine how space between flex items is distr
 
 ### 7. align-items
 
-works when flex-direction:column and determines alignment of items in the cross axis.
+determines alignment of items in the cross axis. ie parpendicular to the flex-direction value
 
 - **stretch**:default value. Flex items stretch the entire length of the other axis depending on value of flex-direction
-- **baseline**: lines up all the text in a flex item
-  values are the same as those in justify content.
+- **baseline**: lines up all the text in a flex item values are the same as those in justify content.
+- **flex-start**: default value. places flex items at _the BEGINNING of the cross axis_ .
+- **flex-end**: places flex items at _the END of the cross axis_.
+- **center**: places flex items at _the CENTER of the cross axis_.
+- **baseline**: items are aligned according to their text baselines
 
 ### 8. align-content
 
-determines alignment of items in the cross axis and multiple rows must exist in the flex container
-and flex-wrap must be included
-values are all the same as in align-items
+determines alignment of items in the cross axis.
+multiple rows must exist in the flex container and flex-wrap must be included.
+values are all the same as in align-items i.e. _stretch, baseline, flex-start, flex-end, center and baseline_
 
 ## 1. flex item properties
 
@@ -190,13 +195,20 @@ values are all the same as in align-items
 
 all flex items have order:0; as the default and can have both negative and positive integer values.
 
-Order:0; items come first and them the rest are arranged in ascending order. the value of flex-direction in the flex-container also comes to play
+Order:0; items come first and then the rest are arranged in ascending order. the value of flex-direction in the flex-container also comes to play
 
 ### 1. flex-grow
 
-determines the amount of space the flex item should take up in the flex container if necessary.
+definition 1: determines the amount of space the flex item should take up in the flex container if necessary.
+definition 2: determins how a given flex item will expland in a flex container based on a set of proportions.
 
-It is relative to the size of the other flex items in the container
+It is relative to the size of the other flex items in the container.
+
+the default behaviour is that flex items do not expand to fill in available space in the container.
+
+items grow based on their flex-grow value relative to the total
+
+dev tools has a shows the extra space added to a flex item with flex-grow
 
 all items have flex-grow:0; as the default. It only takes posive int and decimal values.
 
@@ -206,9 +218,13 @@ setting flex-grow:1; allows remaining space to be distributed evenly among flex 
 
 provides the ability of a flex item to shrink if necessary
 
+it determines how flex items shrink relative to each other when there isn't enough space
+
+items shrink based on their flex-shrink value relative to the total
+
 flex-shrink:1; is the default value for a flex item and is relative to the other items in the container. This is why items shrink to to fit inside a container if screen size is decreased
 
-when flex-shrink:0; flex items dont shrink any more; they just immediately overflow
+when flex-shrink:0; flex items dont shrink any more; they just immediately overflow since the default shrink behaviour is removed.
 
 to control shinking for individual items, add a positive value to flex-shrink on the said item class.
 the value determines the amount of shrinkage relative to the others
@@ -228,9 +244,11 @@ flex-basis, flex-grow and flex-shrink are independent of each other
 
 ### 6. align-self
 
-controls alignment of individual flex items.
+controls alignment of individual flex items. It sets an individual flex items alignment by overriding the flex containers default align-items value.
 
-the values are the same as those in align-items property in flex containers
+the default value is _auto_ which is just the same value as is found in the parent's align-items property
+
+the values are the same as those in align-items property in flex containers. i.e _flex-start, flex-end, center, baseline and stretch_
 
 when specified, it always overrides the align-items value in the flex container
 

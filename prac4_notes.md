@@ -476,6 +476,35 @@ the justify-content property is set on the container determines how flex items a
 The six values it takes are _flex-start, flex-end, center, space-between, space-around and space-evenly_
 
 ### align-items
+set on the flex cotainer and aligns items along the cross axis; ie parpendicular to the flex-direction value.
+
+The five values it takes are _flex-start, flex-end, center, baseline and stretch_
+
+stretch works when the flex items do not have a fixed height. ie the height declaration overrides the set stretch value
+
+box-model properties can still be applied to flex items
+
+### gap
+instead of adding margins to individual flex items for spacing, the gap property set on the flex container achieves the same effect.
+it sets uniform spacing between flex items on the main axis
+the three variations of gap are:
+_gap, row-gap, column-gap_
+
+margin is used when you need different spacing values between items while gap is when equal spacing is required
+
+
+### nested flexbox
+
+this is where a flex container is a child of a parent flex container allowing for multi-level flex layouts
+
+## flex item properties
+They include _flex-grow, flex-shrink, flex, order, flex-basis and align-self_
+
+if flex items are larger than their container and do have a set height/width, they will shink to fit inside
+
+start from responsive design 3:12:00
+
+
 
 
 
